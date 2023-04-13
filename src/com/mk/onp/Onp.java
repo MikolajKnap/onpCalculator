@@ -92,4 +92,56 @@ public class Onp {
         }
         return output.toString();
     }
+
+    public static String calculateOnp(String input){
+        String output = "";
+        String[] stack = new String[10];
+        int sp = -1;
+        double first = 0;
+        double second = 0;
+        for(int i = 0; i < input.length(); i++){
+            char element = input.charAt(i);
+            if(Character.isDigit(element)){
+                sp++;
+                stack[sp] = String.valueOf(element);
+            }
+            else{
+                switch(element){
+                    case '+' -> {
+                        first = Double.parseDouble(stack[sp]);
+                        sp--;
+                        second = Double.parseDouble(stack[sp]);
+                        stack[sp] = String.valueOf(second + first);
+                    }
+                    case '-' -> {
+                        first = Double.parseDouble(stack[sp]);
+                        sp--;
+                        second = Double.parseDouble(stack[sp]);
+                        stack[sp] = String.valueOf(second - first);
+                    }
+                    case '*' -> {
+                        first = Double.parseDouble(stack[sp]);
+                        sp--;
+                        second = Double.parseDouble(stack[sp]);
+                        stack[sp] = String.valueOf(second * first);
+                    }
+                    case '/' -> {
+                        first = Double.parseDouble(stack[sp]);
+                        sp--;
+                        second = Double.parseDouble(stack[sp]);
+                        stack[sp] = String.valueOf(second / first);
+                    }
+                    case '^' -> {
+                        first = Double.parseDouble(stack[sp]);
+                        sp--;
+                        second = Double.parseDouble(stack[sp]);
+
+                        stack[sp] = String.valueOf(Math.pow(second,first));
+                    }
+                }
+            }
+        }
+        output = stack[sp];
+        return output;
+    }
 }
