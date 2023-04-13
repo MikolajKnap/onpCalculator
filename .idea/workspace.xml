@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4ec74c6-535e-401a-8032-f48f8132239b" name="Changes" comment="Added multi-digit numbers handling and comments">
+    <list default="true" id="e4ec74c6-535e-401a-8032-f48f8132239b" name="Changes" comment="Added function to calculateOnp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mk/onp/Onp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mk/onp/Onp.java" afterDir="false" />
@@ -49,6 +49,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Test1Onp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Onp" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;(3+12)*8/2=&quot;" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,24 +82,23 @@
       <option name="project" value="LOCAL" />
       <updated>1681418809829</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added function to calculateOnp">
+      <created>1681421553772</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681421553772</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit - Simple infix to postfix" />
     <MESSAGE value="Added multi-digit numbers handling and comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added multi-digit numbers handling and comments" />
+    <MESSAGE value="Added function to calculateOnp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added function to calculateOnp" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="element" language="JAVA" />

@@ -99,11 +99,18 @@ public class Onp {
         int sp = -1;
         double first = 0;
         double second = 0;
+        String number = "";
         for(int i = 0; i < input.length(); i++){
             char element = input.charAt(i);
             if(Character.isDigit(element)){
+                if(Character.isDigit(input.charAt(i+1))){
+                   number += element;
+                   continue;
+                }
+                number += element;
                 sp++;
-                stack[sp] = String.valueOf(element);
+                stack[sp] = String.valueOf(number);
+                number = "";
             }
             else{
                 switch(element){
