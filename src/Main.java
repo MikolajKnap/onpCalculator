@@ -3,9 +3,12 @@ import static com.mk.onp.Onp.infixToPostfix;
 
 public class Main {
     public static void main(String[] args) {
-        String input = args[0];
-        System.out.println(input);
-        System.out.println(infixToPostfix(input));
-        System.out.println(calculateOnp(infixToPostfix(input)));
+        for(int i = 0; i < args.length; i++){
+            System.out.println("Infix " + args[i]);
+            System.out.println("Postfix: " + infixToPostfix(args[i]));
+            System.out.println("Result: " + calculateOnp(infixToPostfix(args[i])));
+            System.out.println();
+        }
+
     }
 }

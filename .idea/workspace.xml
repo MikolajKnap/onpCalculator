@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4ec74c6-535e-401a-8032-f48f8132239b" name="Changes" comment="Added function to calculateOnp">
+    <list default="true" id="e4ec74c6-535e-401a-8032-f48f8132239b" name="Changes" comment="Added functionality to calculateOnp to deal with multi-digit numbers, tested on args[]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mk/onp/Onp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mk/onp/Onp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +20,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -43,17 +42,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Test1Onp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Onp" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;(3+12)*8/2=&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;(3+12)*8/2=&quot; &quot;2*(11-8)=&quot; &quot;(31+1)*8/2=&quot; &quot;3*(11-9)/4=&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,20 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681421553772</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added functionality to calculateOnp to deal with multi-digit numbers, tested on args[]">
+      <created>1681423517290</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681423517290</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit - Simple infix to postfix" />
     <MESSAGE value="Added multi-digit numbers handling and comments" />
     <MESSAGE value="Added function to calculateOnp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added function to calculateOnp" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="element" language="JAVA" />
-      </configuration>
-    </watches-manager>
+    <MESSAGE value="Added functionality to calculateOnp to deal with multi-digit numbers, tested on args[]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to calculateOnp to deal with multi-digit numbers, tested on args[]" />
   </component>
 </project>
