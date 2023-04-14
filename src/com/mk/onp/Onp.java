@@ -93,6 +93,11 @@ public class Onp {
         return output.toString();
     }
 
+    /**
+     * Calculates equation written in postfix notation
+     * @param input Eqation given in String (multi-digit numbers must have space)
+     * @return Returns result of equation as String
+     */
     public static String calculateOnp(String input){
         String output = "";
         String[] stack = new String[10];
@@ -109,7 +114,7 @@ public class Onp {
                 }
                 number += element;
                 sp++;
-                stack[sp] = String.valueOf(number);
+                stack[sp] = number;
                 number = "";
             }
             else{
