@@ -99,11 +99,11 @@ public class Onp {
      * @return Returns result of equation as String
      */
     public static String calculateOnp(String input){
-        String output = "";
+        String output;
         String[] stack = new String[10];
         int sp = -1;
-        double first = 0;
-        double second = 0;
+        double first;
+        double second;
         String number = "";
         for(int i = 0; i < input.length(); i++){
             char element = input.charAt(i);
@@ -153,6 +153,36 @@ public class Onp {
                 }
             }
         }
+        output = stack[sp];
+        return output;
+    }
+
+    public static String postfixToInfix(String input){
+        String output;
+        String[] stack = new String[10];
+        int sp = -1;
+        String first;
+        String second;
+        String number = "";
+        for(int i = 0; i < input.length(); i++){
+            char element = input.charAt(i);
+            if(Character.isDigit(element)){
+                if(Character.isDigit(input.charAt(i+1))){
+                    number += element;
+                    continue;
+                }
+                number += element;
+                sp++;
+                stack[sp] = number;
+                number = "";
+            }
+            else if (element == '+' || element == '-' || element == '*' || element == '/' || element == '^'){
+                    first = stack[sp];
+                    sp--;
+                    second = stack[sp];
+                    stack[sp] = String.format("(%s%c%s)",second,element,first);
+                }
+            }
         output = stack[sp];
         return output;
     }

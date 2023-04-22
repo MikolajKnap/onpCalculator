@@ -1,5 +1,4 @@
-import static com.mk.onp.Onp.calculateOnp;
-import static com.mk.onp.Onp.infixToPostfix;
+import static com.mk.onp.Onp.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,6 +6,7 @@ public class Main {
             System.out.println("Infix " + args[i]);
             System.out.println("Postfix: " + infixToPostfix(args[i]));
             System.out.println("Result: " + calculateOnp(infixToPostfix(args[i])));
+            System.out.println("PostfixToInfix: " + postfixToInfix(infixToPostfix(args[i])));
             System.out.println();
         }
 
