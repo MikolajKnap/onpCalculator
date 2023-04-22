@@ -9,6 +9,5 @@ public class Main {
             System.out.println("PostfixToInfix: " + postfixToInfix(infixToPostfix(args[i])));
             System.out.println();
         }
-
     }
 }

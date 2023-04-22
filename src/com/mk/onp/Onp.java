@@ -159,10 +159,10 @@ public class Onp {
 
     public static String postfixToInfix(String input){
         String output;
-        String[] stack = new String[10];
+        prioOperatorStruct[] stack = new prioOperatorStruct[10];
         int sp = -1;
-        String first;
-        String second;
+        prioOperatorStruct first;
+        prioOperatorStruct second;
         String number = "";
         for(int i = 0; i < input.length(); i++){
             char element = input.charAt(i);
@@ -173,17 +173,22 @@ public class Onp {
                 }
                 number += element;
                 sp++;
-                stack[sp] = number;
+                stack[sp] = new prioOperatorStruct(number);
                 number = "";
             }
             else if (element == '+' || element == '-' || element == '*' || element == '/' || element == '^'){
                     first = stack[sp];
                     sp--;
                     second = stack[sp];
-                    stack[sp] = String.format("(%s%c%s)",second,element,first);
+                    if(priority(element) < second.getPriorityOp() || (first.getPriorityOp() == 0 && second.getPriorityOp() == 0)){
+                        stack[sp] = new prioOperatorStruct(String.format("(%s%c%s)",second.getEquation(),element,first.getEquation()),element);
+                    }
+                    else{
+                        stack[sp] = new prioOperatorStruct(String.format("%s%c%s",second.getEquation(),element,first.getEquation()),element);
+                    }
                 }
             }
-        output = stack[sp];
+        output = stack[sp].getEquation();
         return output;
     }
 }
